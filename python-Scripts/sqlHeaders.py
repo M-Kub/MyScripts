@@ -1,5 +1,5 @@
 import csv
-import redline
+import readline
 import sys
 
 readline.set_completer_delims(" \t\n=")
@@ -7,11 +7,11 @@ readline.parse_and_bind("tab: complete")
 
 def csvOpen(file):
 
-    with open(file, 'r', newline='', enconding='utf-8-sig') as csvfile:
+    with open(file, 'r', newline='', encoding='utf-8-sig') as csvfile:
         reader = csv.reader(csvfile)
         i = next(reader)
         dRows = sum(1 for line in reader)
-        print(f"You have {dRows} rows in the CSV file:\n" f"Your headers are:\n {i}
+        print(f"You have {dRows} rows in the CSV file:\n" f"Your headers are:\n {i}")
 
 
 if len(sys.argv) > 1:
