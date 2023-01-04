@@ -11,7 +11,7 @@ def csvOpen(file):
         reader = csv.reader(csvfile)
         i = next(reader)
         dRows = sum(1 for line in reader)
-        print(f"You have {dRows} rows in the CSV file:\n" f"Your headers are:\n {i}")
+        print(f"\nYou have {dRows} rows in the CSV file.\n" f"Your headers are:\n{', '.join(map(str.capitalize, i))}")
 
 
 if len(sys.argv) > 1:
